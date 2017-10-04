@@ -1,0 +1,43 @@
+.navbar {
+  width: 100%;
+  background: linear-gradient(to right, #f60200 0%, #f67308 100%);
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-right {
+  display: inherit;
+  list-style-type: none;
+  padding: 0 20px;
+}
+
+.menu-right li {
+  margin: 0 20px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 0.9em;
+}
+
+.menu-right i {
+  margin-right: 10px;
+}
+
+.login-btn {
+  border: 1px solid #fff;
+  padding: 10px 25px;
+  color: #fff;
+}
+
+.logo {
+  padding: 0 40px;
+}
+
+.logo img {
+  height: 27px;
+  width: auto;
+}

@@ -3,7 +3,10 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-import Header from './Header';
+// Global CSS Rules
+import '../assets/normalize.css';
+
+import Header from './header/Header';
 import Landing from './Landing';
 import Dashboard from './Dashboard';
 
@@ -16,7 +19,7 @@ class App extends Component {
     return (
       <div>
         <BrowserRouter>
-          <div className="container">
+          <div>
             <Header />
             <Route exact path="/" component={Landing} />
             <Route path="/dashboard" component={Dashboard} />
