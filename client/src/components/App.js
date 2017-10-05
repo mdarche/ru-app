@@ -7,7 +7,7 @@ import * as actions from '../actions';
 import '../assets/normalize.css';
 
 import Header from './header/Header';
-import Landing from './Landing';
+import Landing from './landing/Landing';
 import Dashboard from './Dashboard';
 
 class App extends Component {
@@ -22,8 +22,7 @@ class App extends Component {
           <div>
             <Header />
             <Route exact path="/" component={Landing} />
-            <Route path="/dashboard" component={Dashboard} />
-            {/* <Route path="/dashboard/overview" component={Dashboard} /> */}
+            <Route exact path="/dashboard" component={Dashboard} />
           </div>
         </BrowserRouter>
       </div>

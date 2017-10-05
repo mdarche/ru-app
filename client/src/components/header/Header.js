@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import SecondHeader from './SecondHeader';
 import './header.css';
 
@@ -41,12 +42,14 @@ class Header extends Component {
     return (
       <nav>
         <div className="navbar">
-          <div className="logo">
-            <img
-              src="http://remoteu.staging.wpengine.com/wp-content/themes/remote-u/img/ru-logo-light.svg"
-              alt="remote-u"
-            />
-          </div>
+          <Link to={this.props.auth ? '/dashboard' : '/'}>
+            <div className="logo">
+              <img
+                src="http://remoteu.staging.wpengine.com/wp-content/themes/remote-u/img/ru-logo-light.svg"
+                alt="remote-u"
+              />
+            </div>
+          </Link>
           <ul className="menu-right">{this.renderMenu()}</ul>
         </div>
         {this.renderSubnav()}
