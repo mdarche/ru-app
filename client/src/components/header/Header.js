@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import SecondHeader from './SecondHeader';
 import './header.css';
 
 class Header extends Component {
-  renderContent() {
+  renderMenu() {
     switch (this.props.auth) {
       case null:
         return;
@@ -30,6 +31,12 @@ class Header extends Component {
     }
   }
 
+  renderSubnav() {
+    if (this.props.auth) {
+      return <SecondHeader />;
+    }
+  }
+
   render() {
     return (
       <nav>
@@ -40,8 +47,9 @@ class Header extends Component {
               alt="remote-u"
             />
           </div>
-          <ul className="menu-right">{this.renderContent()}</ul>
+          <ul className="menu-right">{this.renderMenu()}</ul>
         </div>
+        {this.renderSubnav()}
       </nav>
     );
   }
