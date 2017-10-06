@@ -8,8 +8,10 @@ class Landing extends Component {
     if (!this.props.auth) {
       return (
         <div className="landing-container">
-          <h1>Emaily!</h1>
-          Collect feedback form your users
+          <div>
+            <h1>Unauthorized Landing Page</h1>
+            <p>Sexy Login box coming soon</p>
+          </div>
         </div>
       );
     }
