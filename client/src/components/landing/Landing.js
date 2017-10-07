@@ -2,15 +2,26 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import './landing.css';
+import logo from '../../assets/ru-logo.svg';
 
 class Landing extends Component {
   determineAuth() {
     if (!this.props.auth) {
       return (
         <div className="landing-container">
-          <div>
-            <h1>Unauthorized Landing Page</h1>
-            <p>Sexy Login box coming soon</p>
+          <div className="login-container">
+            <div className="login-box">
+              <div className="login-content">
+                <img src={logo} alt="ru-logo" />
+                <p>Sign In or Create Account</p>
+                <div className="login-divider" />
+                <a className="google-btn" href="/auth/google">
+                  <i className="fa fa-google" aria-hidden="true" />
+                  Login with Google
+                </a>
+              </div>
+            </div>
+            <div className="login-image" />
           </div>
         </div>
       );
