@@ -14,7 +14,6 @@ class Landing extends Component {
               <div className="login-content">
                 <img src={logo} alt="ru-logo" />
                 <p>Sign In or Create Account</p>
-                <div className="login-divider" />
                 <a className="google-btn" href="/auth/google">
                   <i className="fa fa-google" aria-hidden="true" />
                   Login with Google

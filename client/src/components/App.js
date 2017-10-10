@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 // Global CSS Rules
+import '../assets/gridlex.css';
 import '../assets/normalize.css';
 
 import Header from './header/Header';
