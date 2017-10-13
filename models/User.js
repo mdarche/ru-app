@@ -6,7 +6,10 @@ const userSchema = new Schema({
   email: String,
   gender: { type: String, default: 'unknown' },
   name: { first: String, last: String },
-  createdDate: Date
+  createdDate: Date,
+  school: String,
+  gradYear: Number,
+  registration: { type: Boolean, default: false }
 });
 
 mongoose.model('users', userSchema);

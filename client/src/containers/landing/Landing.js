@@ -20,7 +20,9 @@ class Landing extends Component {
                 </a>
               </div>
             </div>
-            <div className="login-image" />
+            <div className="login-image">
+              <div className="login-image-overlay" />
+            </div>
           </div>
         </div>
       );

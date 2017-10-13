@@ -18,11 +18,20 @@ class Header extends Component {
                 />
               </div>
             </Link>
+
             <ul className="menu-right">
-              <li>
-                <i className="fa fa-user-circle" aria-hidden="true" />
-                {this.props.auth.name.first} {this.props.auth.name.last}
+              <li className="current-user">
+                <div>
+                  <div className="user-name">
+                    <i className="fa fa-user-circle" aria-hidden="true" />
+                    {this.props.auth.name.first} {this.props.auth.name.last}
+                  </div>
+                  <div className="user-school">
+                    {this.props.auth.name.school}
+                  </div>
+                </div>
               </li>
+
               <li>
                 <a className="login-btn" href="/api/logout">
                   Logout

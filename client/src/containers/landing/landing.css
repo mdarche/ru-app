@@ -17,6 +17,12 @@
   z-index: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .login-container {
+    height: 80vh;
+  }
+}
+
 .login-box {
   padding: 50px;
   background-color: #fff;
@@ -26,9 +32,25 @@
 }
 
 .login-image {
-  background: linear-gradient(45deg, #f60200 0%, #f67308 100%);
+  background-blend-mode: color;
+  background: linear-gradient(45deg, #f60200 0%, #f67308 100%),
+    url('https://images.unsplash.com/photo-1489110804417-276c3f517515?dpr=1&auto=compress,format&fit=crop&w=3300&h=&q=80&cs=tinysrgb&crop=');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
   height: 50vh;
   width: 55vh;
+}
+
+@media screen and (max-width: 768px) {
+  .login-image {
+    display: none;
+  }
+}
+
+.login-image-overlay {
+  height: 100%;
+  width: 100%;
 }
 
 .login-content {
@@ -44,6 +66,7 @@
 .login-content p {
   font-family: Montserrat;
   color: gray;
+  margin-bottom: 95px;
 }
 
 .login-divider {

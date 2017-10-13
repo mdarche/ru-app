@@ -1,0 +1,102 @@
+.subnav {
+  position: absolute;
+  top: 70px;
+  height: 60px;
+  background-color: #fff;
+  width: 100%;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subnav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0 30px;
+  margin: 20px 0;
+}
+
+.subnav li {
+  margin: 0 30px;
+  font-size: 15px;
+}
+
+.subnav a {
+  color: #7d7d7d;
+  height: 100%;
+  font-family: Montserrat;
+  transition: all ease 0.2s;
+}
+
+.subnav a:hover {
+  color: #f64806;
+}
+
+.subnav li .active {
+  color: #f64806;
+}
+
+.course-menu {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 40px;
+  border-right: 1px solid #eaeaea;
+  align-items: center;
+  transition: all ease 0.2s;
+}
+
+.course-type {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin: -5px 0 2px 0;
+  color: #d0d0d0;
+}
+
+.course-menu:hover,
+.settings-menu:hover {
+  background-color: #fbfbfb;
+}
+
+.course-menu .arrow {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.settings-menu {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 40px;
+  border-left: 1px solid #eaeaea;
+  align-items: center;
+  transition: all ease 0.2s;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 950px) {
+  .subnav i {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .menu-text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .course-menu,
+  .settings-menu {
+    padding: 0 25px;
+  }
+
+  .subnav ul {
+    padding: 0 10px;
+  }
+}
