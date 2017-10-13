@@ -7,9 +7,11 @@ const userSchema = new Schema({
   gender: { type: String, default: 'unknown' },
   name: { first: String, last: String },
   createdDate: Date,
-  school: String,
+  educationLevel: { type: String, default: 'other' },
+  schoolName: String,
   gradYear: Number,
-  registration: { type: Boolean, default: false }
+  registration: { type: Boolean, default: false },
+  instructorCodes: [Number]
 });
 
 mongoose.model('users', userSchema);

@@ -2,9 +2,9 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import menuItems from './menuItems';
-import './secondHeader.css';
+import './subnav.css';
 
-class SubHeader extends Component {
+class SubNav extends Component {
   renderMenu() {
     return _.map(menuItems, ({ label, icon, route }) => {
       return (
@@ -20,7 +20,7 @@ class SubHeader extends Component {
 
   render() {
     return (
-      <div className="subnav">
+      <nav className="subnav">
         <NavLink to="/courses">
           <div className="course-menu">
             <div>
@@ -28,10 +28,7 @@ class SubHeader extends Component {
                 <span className="menu-text">Course</span>
               </div>
               <div className="course-selection">
-                <i className="fa fa-pencil-square-o" aria-hidden="true" />
-                <span className="menu-text">
-                  Web Design <span className="arrow">&#8250;</span>
-                </span>
+                <span className="menu-text">Web Design ▾</span>
               </div>
             </div>
           </div>
@@ -43,9 +40,9 @@ class SubHeader extends Component {
             <span className="menu-text">Settings</span>
           </div>
         </NavLink>
-      </div>
+      </nav>
     );
   }
 }
 
-export default SubHeader;
+export default SubNav;

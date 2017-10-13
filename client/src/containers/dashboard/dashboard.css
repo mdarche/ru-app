@@ -1,0 +1,18 @@
+#content-wrapper {
+  top: 160px;
+  position: absolute;
+  width: 100%;
+  padding: 0 80px;
+}
+
+@media screen and (max-width: 960px) {
+  #content-wrapper {
+    padding: 0 20px;
+  }
+}
+
+.main-content,
+.sidebar {
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+}

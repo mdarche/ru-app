@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import SecondHeader from './SecondHeader';
+import SubNav from './SubNav';
 import './header.css';
 
 class Header extends Component {
@@ -39,7 +39,7 @@ class Header extends Component {
               </li>
             </ul>
           </div>
-          <SecondHeader />
+          <SubNav />
         </nav>
       );
     }

@@ -9,7 +9,7 @@ import '../assets/normalize.css';
 
 import Header from './header/Header';
 import Landing from './landing/Landing';
-import Dashboard from './Dashboard';
+import Dashboard from './dashboard/Dashboard';
 
 class App extends Component {
   componentDidMount() {
