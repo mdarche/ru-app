@@ -2,7 +2,8 @@
   top: 160px;
   position: absolute;
   width: 100%;
-  padding: 0 80px;
+  margin: 0;
+  padding: 0 100px;
 }
 
 @media screen and (max-width: 960px) {
@@ -15,4 +16,5 @@
 .sidebar {
   background-color: #fff;
   border: 1px solid #eaeaea;
+  padding: 30px;
 }

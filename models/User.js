@@ -11,7 +11,14 @@ const userSchema = new Schema({
   schoolName: String,
   gradYear: Number,
   registration: { type: Boolean, default: false },
-  instructorCodes: [Number]
+  classCodes: [
+    {
+      classId: String,
+      approved: { type: Boolean, default: false }
+    }
+  ]
 });
 
-mongoose.model('users', userSchema);
+const User = mongoose.model('users', userSchema);
+
+module.exports = User;
