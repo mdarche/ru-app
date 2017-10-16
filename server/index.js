@@ -7,9 +7,7 @@ const keys = require('./config/keys');
 
 mongoose.Promise = global.Promise;
 if (process.env.NODE_ENV !== 'test') {
-  mongoose.connect(keys.mongoURI, {
-    useMongoClient: true
-  });
+  mongoose.connect(keys.mongoURI, { useMongoClient: true });
 }
 
 // Configure Server
