@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import './landing.css';
+import './login.css';
 import logo from '../../assets/ru-logo.svg';
 
-class Landing extends Component {
+class Login extends Component {
   determineAuth() {
     if (!this.props.auth) {
       return (
@@ -39,4 +39,4 @@ function mapStateToProps({ auth }) {
   return { auth };
 }
 
-export default connect(mapStateToProps)(Landing);
+export default connect(mapStateToProps)(Login);

@@ -6,6 +6,7 @@ import './subnav.css';
 
 class SubNav extends Component {
   renderMenu() {
+    console.log(this.props.user);
     return _.map(menuItems, ({ label, icon, route }) => {
       return (
         <li key={label}>
@@ -34,12 +35,12 @@ class SubNav extends Component {
           </div>
         </NavLink>
         <ul>{this.renderMenu()}</ul>
-        <NavLink to="/settings">
-          <div className="settings-menu">
+        <div className="settings-menu">
+          <NavLink to="/settings">
             <i className="fa fa-cog" aria-hidden="true" />
             <span className="menu-text">Settings</span>
-          </div>
-        </NavLink>
+          </NavLink>
+        </div>
       </nav>
     );
   }

@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import SubNav from './SubNav';
 import './header.css';
 
 class Header extends Component {
-  renderMenu() {
-    if (this.props.auth) {
-      return (
+  render() {
+    return (
+      <header>
         <nav>
           <div className="navbar">
-            <Link to={this.props.auth ? '/dashboard' : '/'}>
+            <Link to="/dashboard">
               <div className="logo">
                 <img
                   src="http://remoteu.staging.wpengine.com/wp-content/themes/remote-u/img/ru-logo-light.svg"
@@ -26,9 +25,7 @@ class Header extends Component {
                     <i className="fa fa-user-circle" aria-hidden="true" />
                     {this.props.auth.name.first} {this.props.auth.name.last}
                   </div>
-                  <div className="user-school">
-                    {this.props.auth.name.school}
-                  </div>
+                  <div className="user-school">{this.props.auth.school}</div>
                 </div>
               </li>
 
@@ -39,19 +36,11 @@ class Header extends Component {
               </li>
             </ul>
           </div>
-          <SubNav />
         </nav>
-      );
-    }
-  }
-
-  render() {
-    return <header>{this.renderMenu()}</header>;
+        <SubNav />
+      </header>
+    );
   }
 }
 
-function mapStateToProps({ auth }) {
-  return { auth };
-}
-
-export default connect(mapStateToProps)(Header);
+export default Header;

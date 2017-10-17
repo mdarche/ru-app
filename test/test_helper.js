@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 
 before(done => {
-  mongoose.connect('mongodb://localhost/ru-test', {
-    useMongoClient: true
-  });
+  mongoose.connect('mongodb://localhost/ru-test', { useMongoClient: true });
   mongoose.connection.once('open', () => done()).on('error', error => {
     console.warn('Warning', error);
   });
