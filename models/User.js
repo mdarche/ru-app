@@ -8,7 +8,7 @@ const userSchema = new Schema({
   name: { first: String, last: String },
   createdDate: Date,
   educationLevel: { type: String, default: 'other' },
-  schoolName: String,
+  school: { type: String, default: 'unknown' },
   gradYear: Number,
   registration: { type: Boolean, default: false },
   classCodes: [
@@ -19,6 +19,8 @@ const userSchema = new Schema({
   ]
 });
 
-const User = mongoose.model('users', userSchema);
+mongoose.model('users', userSchema);
 
-module.exports = User;
+// const User = mongoose.model('users', userSchema);
+//
+// module.exports = User;

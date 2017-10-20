@@ -10,6 +10,7 @@ import '../assets/normalize.css';
 import Header from './header/Header';
 import Login from './login/Login';
 import Dashboard from './dashboard/Dashboard';
+import Register from './register/Register';
 
 class App extends Component {
   componentDidMount() {
@@ -38,17 +39,15 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <BrowserRouter>
-          <div>
-            {this.renderHeader()}
-            {this.renderIndex()}
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/register" component={Dashboard} />
-            <Route path="/login" component={Login} />
-          </div>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <div className="react-container">
+          {this.renderHeader()}
+          {this.renderIndex()}
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
+        </div>
+      </BrowserRouter>
     );
   }
 }

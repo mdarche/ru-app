@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== 'test') {
 const app = express();
 app.use(bodyParser.json());
 
-require('./models');
+require('./models/User');
 require('./config/server')(app, keys.cookieKey);
 require('./controllers')(app);
 

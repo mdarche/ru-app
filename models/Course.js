@@ -3,6 +3,4 @@ const { Schema } = mongoose;
 
 const courseSchema = new Schema({});
 
-const Course = mongoose.model('courses', courseSchema);
-
-module.exports = Course;
+mongoose.model('courses', courseSchema);
