@@ -233,3 +233,13 @@ template {
 [hidden] {
   display: none;
 }
+
+/* Theme Styles */
+
+h1,
+h2,
+h3,
+label,
+button {
+  font-family: Montserrat, Helvetica, sans-serif;
+}

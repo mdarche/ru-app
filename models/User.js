@@ -7,10 +7,11 @@ const userSchema = new Schema({
   gender: { type: String, default: 'unknown' },
   name: { first: String, last: String },
   createdDate: Date,
-  educationLevel: { type: String, default: 'other' },
+  edLevel: { type: String, default: 'other' },
   school: { type: String, default: 'unknown' },
   gradYear: Number,
-  registration: { type: Boolean, default: false },
+  state: String,
+  registered: { type: Boolean, default: false },
   classCodes: [
     {
       classId: String,
