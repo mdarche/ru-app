@@ -19,7 +19,7 @@ class App extends Component {
 
   renderHeader() {
     const { auth } = this.props;
-    return auth && auth.registration ? <Header auth={auth} /> : <div />;
+    return auth ? <Header auth={auth} /> : <div />;
   }
 
   renderIndex() {
